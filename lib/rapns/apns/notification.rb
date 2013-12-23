@@ -83,6 +83,7 @@ module Rapns
       def data=(attrs)
         return unless attrs
         # raise ArgumentError, "must be a Hash" if !attrs.is_a?(Hash)
+        attrs = MultiJson.load(attrs) if attrs.is_a?(String)
         super attrs.merge(data || {})
       end
 
