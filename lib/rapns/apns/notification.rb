@@ -82,7 +82,7 @@ module Rapns
 
       def data=(attrs)
         return unless attrs
-        raise ArgumentError, "must be a Hash" if !attrs.is_a?(Hash)
+        # raise ArgumentError, "must be a Hash" if !attrs.is_a?(Hash)
         super attrs.merge(data || {})
       end
 
